@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Layout</title>
+
+    <style>
+        body{
+           
+            width: 100vw;
+            margin:0;
+            padding:0
+        }
+
+        .layout{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+           
+           
+            
+        }
+
+        .super-center{
+            display:grid;
+            place-items: center;
+            border:1px solid red;
+            height:500px;
+        }
+
+
+         .parent{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            gap: 5px;
+            border:1px solid red;
+            height:500px;
+             overflow-y: scroll;
+        }
+        
+        .dconstructed-pencacke{
+            flex: 1 1 150px;
+            flex: 0 1 150px;
+          
+            border: 1px solid blue;
+           
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-wrap: wrap  ;
+          
+        }
+
+
+        .sidebar-says{
+            display: grid;
+            grid-template-columns: minmax(70px,25%) 1fr;
+            grid-template-rows: 1fr;
+            justify-content: center;
+            height:500px;
+              border:1px solid red;
+        }
+        .side-note{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid black;
+        }
+
+        .pencacke-stake{
+            display:grid;
+            grid-template-rows: auto 1fr auto;
+            height:100%;
+              border:1px solid red;
+                height:500px;
+
+        }
+
+        .header{
+            border-bottom: 1px solid black;
+         
+        }
+
+        .main{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .footer{
+          
+              border-bottom: 1px solid black;
+        }
+       
+        .classic-holy-grill{
+            display:grid;
+            grid-template: auto 1fr auto / auto 1fr auto;
+             height:500px;
+                border:1px solid red;
+        }
+
+        .grill-header{
+            padding:2em;
+            grid-column: 1 / 4;
+             display: flex;
+            justify-content: center;
+            border:1px solid blue
+        }
+        .grill-left{
+            grid-column: 1 / 2;
+            border:1px solid blue
+        }
+        .grill-main{
+            grid-column: 2 / 3;
+            display: flex;
+            justify-content: center;
+              border:1px solid blue
+        }
+        .grill-right{
+            grid-column: 3/4;
+             display: flex;
+            justify-content: center;
+              padding-right: 2em;
+                border:1px solid blue
+        }
+        .grill-footer{
+            grid-column: 1 / 4;
+             display: flex;
+            justify-content: center;
+              border:1px solid blue
+        }
+
+        .span-grid{
+            display:grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+              height:500px;
+                 border:1px solid red;
+        }
+
+        .span1{
+            grid-column: 1 / 13;
+               border:1px solid blue
+        }
+        .span6{
+            grid-column: 1 / 7;
+               border:1px solid blue
+        }
+        .span13{
+            grid-column: 12/ 13;
+               border:1px solid blue
+        }
+
+        .span6{
+            grid-column: 1 / 7;
+               border:1px solid blue
+        }
+
+        .ram{
+            display:grid;
+              grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+            height:500px;
+            border:1px solid red;
+          
+            grid-template-rows: auto;
+          
+        }
+        .box{
+            height:200px;
+            border:1px solid blue;
+        }
+
+        .line-up{
+            height:auto;
+            display: grid;
+            height:500px;
+            border:1px solid red;
+            grid-gap: 1rem ;
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        .visual{
+            height: 100px;
+            width: 100px;
+        }
+
+        .card{
+            display:flex;
+            flex-direction: column;
+            padding:1rem;
+            justify-content: space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="super-center">
+          <button>Click Me</button>
+        </div>
+
+
+        <div class="parent">
+             <div class="dconstructed-pencacke">
+                     <p class="center-align">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    
+                    </div>
+            <div class="dconstructed-pencacke">
+                <p class="center-align">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="dconstructed-pencacke">
+                <p class="center-align">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+       
+    
+        <div class="sidebar-says">
+            <div class="side-note">
+                <p>Sidebar</p>
+            </div>
+            <div class="main-content">
+                <p>Main Content</p>
+            </div>
+        </div>
+        
+        <div class="pencacke-stake">
+            <div class="header">
+                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                       <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                          <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+                           <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> 
+            </div>
+            <div class="main">
+                    <p>This is main section</p>
+            </div>
+            <div class="footer">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            </div>
+        </div>
+
+
+          <div class="classic-holy-grill">
+            <div class="grill-header">
+                <p>Header</p>
+            </div>
+           
+                <div class="grill-left">
+                    <p>Left Sidebar</p>
+
+                </div>
+                <div class="grill-main"><p>Main</p></div>
+                <div class="grill-right"> <p>Right</p></div>
+           
+            <div class="grill-footer">
+                <p>Footer</p>
+            </div>
+        </div>
+          <div class="span-grid">
+            <div class="span1">
+                <p>Span 1 to 12</p>
+            </div>
+            <div class="span6">
+                <p>Span 1 to 6</p>
+            </div>
+            <div class="span13">
+                <p>Span 12 to 13</p>
+            </div>
+        </div>
+          <div class="ram">
+            <div class="box">
+                <p>150px min</p>
+            </div>
+            <div class="box">
+                <p>150px min</p>    
+            </div>
+            <div class="box">
+                <p>150px min</p>
+
+            </div>
+             
+            <div class="box">
+                <p>150px min</p>
+            </div>
+            <div class="box">
+                <p>150px min</p>    
+            </div>
+            <div class="box">
+                <p>150px min</p>
+
+            </div>
+            <div class="box">
+                <p>150px min</p>
+
+            </div>
+            <div class="box">
+                <p>150px min</p>
+
+            </div>
+            <div class="box">
+                <p>150px min</p>
+
+            </div>
+        </div>
+<div class="line-up">
+    <div class="card visual" style="background-color: lightcoral;">
+        <p>Card 1</p>
+    </div>
+    <div class="card visual" style="background-color: lightseagreen;">
+        <p>Card 2</p>
+    </div>
+    <div class="card visual" style="background-color: lightblue;">
+        <p>Card 3</p>
+    </div>
+
+</div>
+
+</body>
+</html>
